@@ -1,22 +1,31 @@
 body{
     margin: 0;
-    background: #FC466B;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #3F5EFB, #FC466B);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    min-height: 100vh;
+    background: #d9a7c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
-header h1{
-    text-align: center;
-    color :black;
+
+header img{
+    height: 270px;
+    width: 1550px;
+    position: sticky;
+    top:0; 
+}
+nav{
+    
+    position: sticky;
+    top:0; 
 }
 nav ul{
     
     overflow: hidden;
     list-style-type:none;
-    background-color: wheat;
+    background-color: rgb(129, 89, 13);
     margin: 0;
     padding: 0;
     
+   
     
 }
 nav ul li{
@@ -40,7 +49,7 @@ nav ul li a:hover{
 article {
     margin: 15px;
     padding: 0 6px;
-    background-color:#ebd5ad;
+    background-color:#f1e7d4;
     ;
 }
 
@@ -54,4 +63,143 @@ nav .nav-active{
         float:none;
     }
 }
+.substr{
+     background-color: black;
+     color: white; width: 55%;
+     height: 40px;
+    
+}
+.VD1{
+    color: white ;
+    background-color: black;
+    width: 55%;
+    height: 80px;
+}
+.VD2{
+    color: white ;
+    background-color: black;
+    width: 55%;
+    height: 60px;
+}
+.VD3{
+    color: white ;
+    background-color: black;
+    width: 55%;
+    height: 70px;
 
+}
+.substring{
+    color: white ;
+    background-color: black;
+    width: 55%;
+    height: 40px;
+}
+.VD4{
+    color: white ;
+    background-color: black;
+    width: 55%;
+    height: 80px;
+}
+.slice{
+    color: white ;
+    background-color: black;
+    width: 55%;
+    height: 40px;
+}
+.VD{
+    color: white ;
+    background-color: black;
+    width: 55%;
+    height: 80px;
+}
+.VD5{
+    color: white ;
+    background-color: black;
+    width: 55%;
+    height: 80px;
+}
+.moment{
+    color: white ;
+    background-color: black;
+    width: 55%;
+    height: 120px;
+}
+.String{
+    color: white ;
+    background-color: black;
+    width: 55%;
+    height: 80px;
+}
+.Millisecond{
+    color: white ;
+    background-color: black;
+    width: 55%;
+    height: 80px;
+}
+.Second{
+    color: white ;
+    background-color: black;
+    width: 55%;
+    height: 80px;
+}
+.Minute{
+    color: white ;
+    background-color: black;
+    width: 55%;
+    height: 80px;
+}
+.Hour{
+    color: white ;
+    background-color: black;
+    width: 55%;
+    height: 80px;
+}
+.Date{
+    color: white ;
+    background-color: black;
+    width: 55%;
+    height: 80px;
+}
+.Month{
+    color: white ;
+    background-color: black;
+    width: 55%;
+    height: 80px;
+}
+.Year{
+    color: white ;
+    background-color: black;
+    width: 55%;
+    height: 80px;
+}
+.Get{
+    color: white ;
+    background-color: black;
+    width: 55%;
+    height: 155px;
+}
+.vidu{
+    color: white ;
+    background-color: black;
+    width: 55%;
+    height: 170px; 
+}
+.Add{
+    color: white ;
+    background-color: black;
+    width: 55%;
+    height: 60px; 
+}
+.Subtract{
+    color: white ;
+    background-color: black;
+    width: 55%;
+    height: 60px; 
+}
+.Start{
+    color: white ;
+    background-color: black;
+    width: 55%;
+    height: 240px; 
+
+}

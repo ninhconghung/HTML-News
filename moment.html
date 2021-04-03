@@ -10,15 +10,243 @@
 </head>
 <body>
     <header>
-        <h1>Blog of Hung</h1>
+        <img src="https://codeschool.vn/wp-content/uploads/2020/06/featured-html-syntax-structure.jpg"/>
     </header>
     <nav>
     <ul>
-        <li><a href="index.html">trang chu</a></li>
-        <li><a href="so-sanh.html">So Sanh khac nhau giua let va var</a></li>
-        <li><a href="so-sanh-css.html">So Sanh slice, substring, substr</a></li>
-        <li><a  class="nav-active" href="moment.html">MomentsJS</a></li>
+        <li><a  href="index.html">Trang Chủ</a></li>
+        <li><a href="so-sanh.html">So Sánh Khác Nhau Giữa Let và Var</a></li>
+        <li><a href="so-sanh-css.html">So Sánh slice, substring, substr</a></li>
+        <li><a class="nav-active" href="moment.html">MomentsJS</a></li>
     </ul>
     </nav>
+    <article>
+        <h5>Moment.js là gì?</h5>
+        <p>+ Moment.js là một thư viện mạnh dùng để thao tác xử lý datetime trong javascript.</p>
+        <p>+ Moment.js được thiết kế hoạt động trong cả browser và Node.js</p>
+        <p>+ Có thể tải moment.js tại đây Cài đặt moment.js</p>
+        <div class="moment">
+            <pre>
+                <code>
+npm install moment --save   # npm
+yarn add moment             # Yarn
+Install-Package Moment.js   # NuGet
+spm install moment --save   # spm
+meteor add momentjs:moment  # meteor
+bower install moment --save # bower (deprecated)
+                </code>
+            </pre>
+        </div>
+        <h5>Parse</h5>
+        <p>Thay vì sửa đổi Date.prototype nguyên bản, Moment.js tạo một wrapper cho Date object. Để có được đối tượng wrapper này, </p>
+        <p>chỉ cần gọi moment () với một trong các loại đầu vào được hỗ trợ.</p>
+        <p>Moment.prototype được thể hiện qua moment.fn . Nếu bạn muốn thêm các chức năng của riêng bạn, đó là nơi bạn sẽ đặt chúng.</p>
+        <p>Để dễ tham chiếu, bất kỳ phương pháp nào trên Moment.prototype sẽ được tham chiếu trong các tài liệu như moment#method</p>
+        <h5>Moment.prototype.format == moment.fn.format == moment#format.</h5>
+        <h5>Now</h5>
+        <p>Cú pháp moment(); Để có được ngày và giờ hiện tại, chỉ cần gọi moment () mà không có tham số. var now = moment()</p>
+        <h5>String</h5>
+        <p>Cú pháp: moment(String) Ví dụ: <pre>var day = moment("1995-12-25");</pre></p>
+        <h5>String+Format</h5>
+        <p>Định dạng moment theo chuẩn quy định Cú pháp:</p>
+        <div class="String">
+            <pre>
+                <code>
+moment(String, String);
+moment(String, String, String);
+moment(String, String, Boolean);
+moment(String, String, String, Boolean);
+                </code>
+            </pre>
+        </div>
+        <p>Nếu bạn biết định dạng của một chuỗi đầu vào, bạn có thể sử dụng nó để phân tích một thời điểm.</p>
+        <pre>
+            <code>
+moment("12-25-1995", "MM-DD-YYYY");
+            </code>
+        </pre>
+        <h5>Get+Set</h5>
+        <p>Moment.js sử dụng overload getters, setters. Bạn có thể quen thuộc với pattern này từ việc sử dụng nó trong jQuery.</p>
+        <h5>Millisecond</h5>
+        <p>Cú pháp:</p>
+        <div class="Millisecond">
+            <pre>
+                <code>
+moment().millisecond(Number);
+moment().millisecond(); // Number
+moment().milliseconds(Number);
+moment().milliseconds(); // Number
+                </code>
+            </pre>
+        </div>
+        <p>Lấy hoặc thiết lập mili giây. Chấp nhận số từ 0 đến 999</p>
+        <h5>Second</h5>
+        <p>Cú pháp:</p>
+        <div class="Second">
+            <pre>
+                <code>
+moment().second(Number);
+moment().second(); // Number
+moment().seconds(Number);
+moment().seconds(); // Number
+                </code>
+            </pre>
+        </div>
+        <p>Lấy hoặc thiết lập giây. Chấp nhận số từ 0 đến 59.</p>
+        <h5>Minute</h5>
+        <p>Cú pháp:</p>
+        <div class="Minute">
+            <pre>
+                <code>
+moment().minute(Number);
+moment().minute(); // Number
+moment().minutes(Number);
+moment().minutes(); // Number
+                </code>
+            </pre>
+        </div>
+        <p>Lấy hoặc thiết lập phút. Chấp nhận số từ 0 đến 59.</p>
+        <h5>Hour</h5>
+        <p>Cú pháp</p>
+        <div class="Hour">
+            <pre>
+                <code>
+moment().hour(Number);
+moment().hour(); // Number
+moment().hours(Number);
+moment().hours(); // Number
+                </code>
+            </pre>
+        </div>
+        <p>Lấy hoặc thiết lập giờ. Chấp nhận số từ 0 đến 23</p>
+        <h5>Date of Month</h5>
+        <p>Cú pháp</p>
+        <div class="Date">
+            <pre>
+                <code>
+ moment().date(Number);
+moment().date(); // Number
+moment().dates(Number);
+moment().dates(); // Number
+                </code>
+            </pre>
+        </div>
+        <p>Lấy hoặc thiết lập ngày của tháng. Chấp nhận số từ 0 đến 31.</p>
+        <h5>Month</h5>
+        <p>Cú pháp</p>
+        <div class="Month">
+            <pre>
+                <code>
+ moment().month(Number|String);
+moment().month(); // Number
+moment().months(Number|String);
+moment().months(); // Number
+
+                </code>
+            </pre>
+        </div>
+        <p>Lấy hoặc thiết lập tháng. Chấp nhận số từ 0 đến 11. Tháng không được lập chỉ mục, vì vậy January là tháng 0</p>
+        <h5>Year</h5>
+        <p>Cú pháp</p>
+        <div class="Year">
+            <pre>
+                <code>
+moment().year(Number);
+moment().year(); // Number
+moment().years(Number);
+moment().years(); // Number
+                </code>
+            </pre>
+        </div>
+        <p>Lấy hoặc thiết lập năm. Chấp nhận số từ -270000 đến 270000.</p>
+        <h5>Get</h5>
+        <p>Cú pháp</p>
+        <div class="Get">
+            <pre>
+                <code>
+moment().get('year');
+moment().get('month');  // 0 to 11
+moment().get('date');
+moment().get('hour');
+moment().get('minute');
+moment().get('second');
+moment().get('millisecond');
+                </code>
+            </pre>
+        </div>
+        <h5>Set</h5>
+        <p>Cú pháp</p>
+        <div class="Set">
+            <pre>
+                <code>
+moment().set(String, Int);
+moment().set(Object(String, Int));
+                </code>
+            </pre>
+        </div>
+        <h5>Ví dụ:</h5>
+        <div class="vidu">
+            <pre>
+                <code>
+moment().set('year', 2013);
+moment().set('month', 3);  // April
+moment().set('date', 1);
+moment().set('hour', 13);
+moment().set('minute', 20);
+moment().set('second', 30);
+moment().set('millisecond', 123);
+moment().set({'year': 2013, 'month': 3});
+                </code>
+            </pre>
+        </div>
+        <h5>Manipulate</h5>
+        <p>Một khi bạn đã có một moment, bạn có thể muốn thao tác nó. Có một số phương pháp để hỗ trợ thực thi.</p>
+        <h5>Add</h5>
+        <p>Cú pháp</p>
+        <div class="Add">
+            <pre>
+                <code>
+moment().add(Number, String);
+moment().add(Duration);
+moment().add(Object);
+                </code>
+            </pre>
+        </div>
+        <p>Đây là một chức năng khá mạnh mẽ để thêm thời gian vào một moment. Để thêm thời gian hãy thêm giá trị </p>
+        <p>cùng với keys phù hợp Ví dụ: moment().add(7, 'days')</p>
+        <h5>Subtract</h5>
+        <p>Cú pháp</p>
+        <div class="Subtract">
+            <pre>
+                <code>
+moment().subtract(Number, String);
+moment().subtract(Duration);
+moment().subtract(Object);
+                </code>
+            </pre>
+        </div>
+        <p>Đây là chức năng cộng thêm 1 khoảng thời gian chỉ định cho moment Ví dụ: moment().subtract(7, 'days');</p>
+        <h5>Start of Time</h5>
+        <p>Cú pháp: moment().startOf(String); Làm biến đổi moment bằng cách thiết lập nó vào đầu của một đơn vị thời gian</p>
+        <div class="Start">
+            <pre>
+                <code>
+ moment().startOf('year');    // set to January 1st, 12:00 am this year
+moment().startOf('month');   // set to the first of this month, 12:00 am
+moment().startOf('quarter');  // set to the beginning of the current quarter, 1st day of months, 12:00 am
+moment().startOf('week');    // set to the first day of this week, 12:00 am
+moment().startOf('isoWeek'); // set to the first day of this week according to ISO 8601, 12:00 am
+moment().startOf('day');     // set to 12:00 am today
+moment().startOf('date');     // set to 12:00 am today
+moment().startOf('hour');    // set to now, but with 0 mins, 0 secs, and 0 ms
+moment().startOf('minute');  // set to now, but with 0 seconds and 0 milliseconds
+moment().startOf('second');  // same as moment().milliseconds(0);
+                </code>
+            </pre>
+        </div>
+        <h5>End of Time</h5>
+        <p>Cú pháp: moment().endOf(String); Làm biến đổi moment bằng cách thiết lập nó vào cuối của một đơn vị thời gian.</p>
+        <p>Ví dụ: moment().endOf("year"); // set the moment to 12-31 23:59:59.999 this year</p>
+    </article>
 </body>
 </html>

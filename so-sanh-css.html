@@ -9,20 +9,20 @@
     <script src='resource/main.js' ></script>
 </head>
 <body>
-    <header>
-        <h1>Blog of Hung</h1>
+    <header >
+        <img src="https://codeschool.vn/wp-content/uploads/2020/06/featured-html-syntax-structure.jpg"/>
     </header>
     <nav>
         <ul>
-        <li><a href="index.html">trang chu</a></li>
-        <li><a href="so-sanh.html">So Sanh khac nhau giua let va var</a></li>
-        <li><a class="nav-active" href="so-sanh-css.html">So Sanh slice, substring, substr</a></li>
-        <li><a href="moment.html">MomentsJS</a></li>
-    </ul>
+            <li><a href="index.html">Trang Chủ</a></li>
+            <li><a href="so-sanh.html">So Sánh Khác Nhau Giữa Let và Var</a></li>
+            <li><a class="nav-active" href="so-sanh-css.html">So Sánh slice, substring, substr</a></li>
+            <li><a href="moment.html">MomentsJS</a></li>
+        </ul>
     </nav>
     <article>
         <h5>1. Hàm substr()</h5>
-        <div style="background-color: gray; color: white; width: 50%;;">
+        <div class="substr">
             <pre>
                 <code>
                     Cấu trúc: string.substr(start[, length]);
@@ -32,8 +32,8 @@
         <p> - start: là vị trí bắt đầu</p>
         <p>- length: là độ dài chuỗi con cần lấy tính từ vị trí bắt đầu</p>
         <img src="http://4.bp.blogspot.com/-udfWmfdgNo4/UYtHJjgwmrI/AAAAAAAAAQM/GWWr_4lcyk0/s1600/12.jpg"/>
-        <h5>VD1:</h5>
-        <div style="color: white ; background-color: gray; width: 50%;">
+        <p>VD1:</p>
+        <div class="VD1">
             <pre>
                 <code>
 var str="abcdefghijklmnopq";
@@ -42,6 +42,90 @@ document.write(str.substr(3,5)); //Từ vị trí thứ 3 lấy thêm 5 ký tự
                 </code>
             </pre>
         </div>
+        <p>Nếu vị trí bắt đầu là số âm, hàm sẽ đếm ngược từ cuối chuỗi.</p>
+        <p>VD2:</p>
+        <div class="VD2">
+            <pre>
+                <code>
+var str="abcdefghijklmnopq";
+document.write(str.substr(-10,4)); //từ vị trí thứ 10 tính từ cuối chuỗi lấy thêm 4 ký tự. Kết quả: "hijk"
+                </code>
+            </pre>
+        </div>
+        <p>+ Nếu độ dài (length) bằng 0 sẽ trả về 1 sâu rỗng </p>
+        <p>+ Nếu độ dài là giá trị âm sẽ được tính như là 0 </p>
+        <p>+ Nếu khuyết độ dài (length) hàm sẽ trả về chuỗi con được tính từ vị trí bắt đầu đến cuối chuỗi.</p>
+        <p>VD3:</p>
+        <div class="VD3">
+            <pre>
+                <code>
+var str="abcdefghijklmnopq";
+document.write(str.substr(3)); //Tính từ vị trí thứ 3 đến cuối chuỗi. Kết quả: "defghijklmnopq"
+document.write(str.substr(-5)); //Tính từ vị trí thứ 5 (đếm từ cuối chuỗi) đến cuối chuỗi. Kết quả: "mnopq"
+                </code>
+            </pre>
+        </div>
+        <h5>2. Hàm substring()</h5>
+        <div class="substring">
+            <pre>
+                <code>
+Cấu trúc: string.substring(start[, stop]);
+                </code>
+            </pre>
+        </div>
+        <p>+ strart: vị trí bắt đầu</p>
+        <p>+ stop: vị trí kết thúc</p>
+        <img src="http://4.bp.blogspot.com/-kzNsygiyn5o/UYtHJs3r4ZI/AAAAAAAAAQY/9C03JgElwRg/s1600/22.jpg"/>
+        <p>VD4:</p>
+        <div class="VD4">
+            <pre>
+                <code>
+var str="abcdefghijklmnopq";
+document.write(str.substring(0,3)); //Lấy từ đầu chuỗi đến vị trí tứ 3. Kết quả: "abc"
+document.write(str.substring(3,8)); //Lấy từ vị trí thứ 3 đến vị trí thứ 8. Kết quả: "defgh"
+                </code>
+            </pre>
+        </div>
+        <p>+ Nếu start bằng stop nó sẽ trả về chuỗi rỗng </p>
+        <p>+ Nếu 1 trong 2 giá trị (start, stop) âm (nhỏ hơn 0) nó sẽ được xử lý như là 0</p>
+        <p>+ Nếu start > stop nó sẽ đổi vị trí 2 đối số</p>
+        <p>+ Nếu 1 trong 2 giá trị (start, stop) lớn hơn chiều dài của chuỗi sẽ được xử lý bằng độ dài của chuỗi. (Nó cũng giống như bị</p>
+        <p> khuyết giá trị đó)</p>
+        <p>+ Nếu bỏ qua stop (khuyết stop) sẽ lấy từ vị trí bắt đầu đến cuối chuỗi. (điều này giống với hàm substr())</p>
+        <h5>3. Hàm slice()</h5>
+        <div class="slice">
+            <pre>
+                <code>
+Cấu trúc: string.slice(start[, stop]);
+                </code>
+            </pre>
+        </div>
+        <p>+  Nếu giá trị kết thúc (stop) được bỏ qua cũng như hàm substring() sẽ tính từ vị trí bắt đầu đến cuối chuỗi</p>
+        <p>+ Nếu start > stop, slice() sẽ không trao đổi 2 đối số. (Được con là điều kiện sai, trả về chuỗi rỗng)</p>
+        <p>+ Nếu start là số âm , slice() sẽ thiết vị trí đếm từ cuối chuỗi, giống như substr(). Trong trường hợp đếm từ cuối chuỗi nhưng  </p>
+        <p>vị trí bắt đầu vẫn vượt vị trí kết thúc trong chuỗi nó sẽ giống như trường hợp start > stop.</p>
+        <p>VD:</p>
+        <div class="VD">
+            <pre>
+                <code>
+var str="abcdefghijklmnopq";
+document.write(str.slice(-10,-8)); Tính từ vị trí thứ 10 đếm ngược từ cuối chuỗi đến vị trí thứ 8 đếm ngược từ
+cuối chuỗi. Kết quả: "h"
+                </code>
+            </pre>
+        </div>
+        <p>+ Nếu stop là âm, thì vị trí kết thúc cũng sẽ được tính từ cuối chuỗi đếm ngược lại.</p>
+        <div class="VD5">
+            <pre>
+                <code>
+var str="abcdefghijklmnopq";
+document.write(str.slice(-10,-7)); Tính từ vị trí thứ 10 đếm ngược từ cuối chuỗi đến vị trí thứ 8 đếm ngược từ 
+cuối chuỗi. Kết quả: "hij"
+                </code>
+            </pre>
+        </div>
+        <p>* Chú ý khi sử dụng slice() bạn có thể cho giá trị dương hoặc âm (tức là đếm từ đầu hoặc cuối chuỗi) nhưng vị trí bắt đầu không </p>
+        <p>được vượt quá vị trí kết thúc, nếu không sẽ được coi là sai.</p>
     </article>
 </body>
 </html>

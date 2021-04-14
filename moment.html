@@ -7,6 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href=' resource/main.css'>
     <script src='resource/main.js' ></script>
+    <script src='jquery.js' ></script>
 </head>
 <body>
     <header>
@@ -18,9 +19,22 @@
         <li><a href="so-sanh.html">So Sánh Khác Nhau Giữa Let và Var</a></li>
         <li><a href="so-sanh-css.html">So Sánh slice, substring, substr</a></li>
         <li><a class="nav-active" href="moment.html">MomentsJS</a></li>
+        <li><a  href="Timestamp.html">Timestamp</a></li>
     </ul>
     </nav>
+    <button id="slide-down">down</button>
+    <button id="slide-up">up</button>
     <article>
+        <script>
+            $('#slide-down').click(function(){
+            $('article').slideDown('fast');
+                });
+        
+        $('#slide-up').click(function(){
+            $('article').slideUp(200);
+                });
+        
+        </script>  
         <h5>Moment.js là gì?</h5>
         <p>+ Moment.js là một thư viện mạnh dùng để thao tác xử lý datetime trong javascript.</p>
         <p>+ Moment.js được thiết kế hoạt động trong cả browser và Node.js</p>

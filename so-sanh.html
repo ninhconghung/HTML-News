@@ -18,9 +18,22 @@
             <li><a class="nav-active" href="so-sanh.html">So Sánh Khác Nhau Giữa Let và Var</a></li>
             <li><a href="so-sanh-css.html">So Sánh slice, substring, substr</a></li>
             <li><a href="moment.html">MomentsJS</a></li>
+            <li><a href="Timestamp.html">Timestamp</a></li>
+            <script src='jquery.js' ></script>
          </ul>
     </nav>
+    <button id="slide-down">down</button>
+    <button id="slide-up">up</button>
     <article>
+        <script>
+            $('#slide-down').click(function(){
+            $('article').slideDown('fast');
+                });
+        
+            $('#slide-up').click(function(){
+            $('article').slideUp(200);
+                });      
+        </script>  
         <h4>Khác Nhau Giữa Var và Let</h4>
         <p>+ Phạm vi của biến số sử dụng var là phạm vi hàm số hoặc bên ngoài hàm số, toàn cục</p>
         <p>+ Phạm vi của biến số sử dụng let là phạm vi một khối, xác định bởi cặp {}   </p>

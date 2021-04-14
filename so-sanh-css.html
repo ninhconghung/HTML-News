@@ -7,6 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href=' resource/main.css'>
     <script src='resource/main.js' ></script>
+    <script src='jquery.js' ></script>
 </head>
 <body>
     <header >
@@ -18,9 +19,23 @@
             <li><a href="so-sanh.html">So Sánh Khác Nhau Giữa Let và Var</a></li>
             <li><a class="nav-active" href="so-sanh-css.html">So Sánh slice, substring, substr</a></li>
             <li><a href="moment.html">MomentsJS</a></li>
+            <li><a  href="Timestamp.html">Timestamp</a></li>
         </ul>
     </nav>
-    <article>
+        <button id="slide-down">down</button>
+        <button id="slide-up">up</button>
+
+    <article>   
+        <script>
+            $('#slide-down').click(function(){
+            $('article').slideDown('fast');
+                });
+        
+        $('#slide-up').click(function(){
+            $('article').slideUp(200);
+                });
+        
+        </script>  
         <h5>1. Hàm substr()</h5>
         <div class="substr">
             <pre>
@@ -127,5 +142,51 @@ cuối chuỗi. Kết quả: "hij"
         <p>* Chú ý khi sử dụng slice() bạn có thể cho giá trị dương hoặc âm (tức là đếm từ đầu hoặc cuối chuỗi) nhưng vị trí bắt đầu không </p>
         <p>được vượt quá vị trí kết thúc, nếu không sẽ được coi là sai.</p>
     </article>
+    
+    <div class="comment-section">
+        <div>
+            <form name="formCmt" action="" method="post" style="width: 400px; margin:auto" onsubmit="return validateFormComment()">
+                <h1>Binh luan</h1>
+                <p>Email:</p>
+                <label for="fname"></label>
+                <input type="text" name="email" id="email">
+                <p>Tieu De:</p>
+                <label for="fname"></label>
+                <input type="text" name="title" id="title">
+                <p>Noi Dung:</p>
+                <label for="fname"></label>
+                <textarea type="text" name="content" id="content">
+                </textarea>
+                <p id="form-error"></p>
+                <div class="btn-section">
+                    <input type="reset" value="Xoa noi dung">
+                    <input type="submit" value="Binh luan">
+                </div>
+            </form>
+        </div>
+
+        <div id="comment" class="comment-black">
+            <div>
+                <h3>Bai viet rat hay</h3>
+                <span>hocsinhtapcode@gmail.com.vn</span>
+                <div>Bai viet rat hay</div>
+            </div>
+            <div>
+                <h3>Bai viet rat hay</h3>
+                <span>hocsinhtapcode@gmail.com.vn</span>
+                <div>Bai viet rat hay</div>
+            </div>
+            <div>
+                <h3>Bai viet rat hay</h3>
+                <span>hocsinhtapcode@gmail.com.vn</span>
+                <div>Bai viet rat hay</div>
+            </div>
+        </div>
+        <script>
+            $("#nav-active").click(function(){
+                
+            })
+        </script>
+    </div>
 </body>
 </html>

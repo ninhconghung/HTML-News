@@ -203,3 +203,35 @@ nav .nav-active{
     height: 240px; 
 
 }
+#email{
+    width: 50%;
+}
+#title{
+    width: 50%;
+
+}
+#content{
+    width: 50%;
+    
+    
+}
+.form-cmt{
+   text-align: center;
+    width: 50%;
+    margin-left: 25%;
+    
+}
+.cmt{
+    width: 50%;
+    margin-top: 5px;
+}
+.reset{
+    margin-top: 5px;
+    width: 50%;
+}
+#form-error p {
+    color: red;
+    font-size: hight;
+
+}
+
